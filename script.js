@@ -15,7 +15,7 @@ function secondsToMinutesSeconds(seconds) {
 
 async function getSongs(folder) {
   currFolder = folder;
-  let a = await fetch(`http://127.0.0.1:3000/${folder}/`);
+  let a = await fetch(`https://665b4c77b78f70d4f06c2d2c--spotify-12.netlify.app/${folder}/`);
   let response = await a.text();
   let div = document.createElement("div");
   div.innerHTML = response;
@@ -66,7 +66,7 @@ const playMusic = (track, pause = false) => {
 
 async function displayAlbums() {
   try {
-    let response = await fetch(`http://127.0.0.1:3000/songs/`);
+    let response = await fetch(`https://665b4c77b78f70d4f06c2d2c--spotify-12.netlify.app/songs/`);
     if (!response.ok) {
       throw new Error(`Failed to fetch albums: ${response.statusText}`);
     }
@@ -84,7 +84,7 @@ async function displayAlbums() {
       if (e.href.includes("/songs")) {
         let folder = e.href.split("/").slice(-2)[0];
         try {
-          let infoResponse = await fetch(`http://127.0.0.1:3000/songs/${folder}/info.json`);
+          let infoResponse = await fetch(`https://665b4c77b78f70d4f06c2d2c--spotify-12.netlify.app/songs/${folder}/info.json`);
           if (!infoResponse.ok) {
             console.error(`Info file not found for folder: ${folder}`);
             continue;
