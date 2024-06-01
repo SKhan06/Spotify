@@ -15,7 +15,7 @@ function secondsToMinutesSeconds(seconds) {
 
 async function getSongs(folder) {
   currFolder = folder;
-  let a = await fetch(`./${folder}/`);
+  let a = await fetch(`${folder}/`);
   let response = await a.text();
   let div = document.createElement("div");
   div.innerHTML = response;
@@ -66,7 +66,7 @@ const playMusic = (track, pause = false) => {
 
 async function displayAlbums() {
   try {
-    let response = await fetch(`./songs/`);
+    let response = await fetch(`/songs/`);
     if (!response.ok) {
       throw new Error(`Failed to fetch albums: ${response.statusText}`);
     }
@@ -84,7 +84,7 @@ async function displayAlbums() {
       if (e.href.includes("/songs")) {
         let folder = e.href.split("/").slice(-2)[0];
         try {
-          let infoResponse = await fetch(`./songs/${folder}/info.json`);
+          let infoResponse = await fetch(`/songs/${folder}/info.json`);
           if (!infoResponse.ok) {
             console.error(`Info file not found for folder: ${folder}`);
             continue;
