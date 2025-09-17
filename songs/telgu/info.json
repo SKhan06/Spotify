@@ -1,4 +1,11 @@
 {
-    "title":"Telgu",
-    "description": " Cover Songs for you"
+  "title": "Telgu",
+  "description": " Cover Songs for you",
+  "songs": [
+    "Alekhya Harika _ Vinay Shanmukh.mp3",
+    "JAILER - Hukum.mp3",
+    "Kurchi Madathapetti.mp3",
+    "Oh My Baby Full.mp3",
+    "SOOSEKI _ Pushpa 2.mp3"
+  ]
 }

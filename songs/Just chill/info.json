@@ -1,4 +1,11 @@
 {
-    "title":" Just Chill",
-    "description": " Cover Songs for you"
+  "title": " Just Chill",
+  "description": " Cover Songs for you",
+  "songs": [
+    "Coke Studio.mp3",
+    "Just Chill.mp3",
+    "Justh - Chor.mp3",
+    " Main Kabhi Bhoolunga Na Tujhe.mp3",
+    "Meray Paas Tum Ho.mp3"
+  ]
 }
